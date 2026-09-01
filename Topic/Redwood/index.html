@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An exploration of the history and evolution of the world's redwood trees.">
+    <title>The Enduring Redwood | Evolution of Giants</title>
+    
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #f9f9f7;
+            --text-main: #2c3e50;
+            --accent-color: #2e4a35; /* Forest Green */
+            --accent-light: #4a7c59;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            line-height: 1.8;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+            border-bottom: 2px solid var(--accent-color);
+            margin-bottom: 40px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-bottom: 80px;
+        }
+
+        p {
+            margin-bottom: 24px;
+            font-size: 1.1rem;
+        }
+
+        /* Image Styling */
+        figure {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        figcaption {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Dynamic Widget Styling */
+        .widget-container {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid var(--accent-light);
+            border-radius: 4px;
+            background-color: #fff;
+            color: var(--text-main);
+            cursor: pointer;
+        }
+
+        .species-card {
+            display: none; /* Hidden by default, toggled via JS */
+            padding: 20px;
+            background: var(--bg-color);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 4px;
+        }
+
+        .species-card.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .species-card h3 {
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .trait-list {
+            list-style: none;
+        }
+
+        .trait-list li {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .trait-list strong {
+            color: var(--accent-light);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Blockquote */
+        blockquote {
+            border-left: 4px solid var(--accent-light);
+            padding-left: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>The Enduring Redwood</h1>
+        <p style="font-family: 'Open Sans', sans-serif; color: #666;">A History of Earth's Giants</p>
+    </header>
+
+    <main>
+        <p>The coastal redwood forests of California are some of the most awe-inspiring environments on Earth. Gazing up at these towering giants, it is easy to assume they are invincible. Yet, despite their absolute dominance where they grow, their natural range is restricted to a seemingly random, narrow chain of mountains on the Pacific coast.</p>
+        
+        <p>To understand why these trees only grow in such isolated pockets today, we have to look back millions of years to a time when they dominated the entire planet.</p>
+
+        <!-- Placeholder Image 1 -->
+        <figure>
+            <img src="assets/coastal-redwoods.jpg" alt="Coastal redwood trees shrouded in dense coastal fog" onerror="this.src='https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=800&q=80'">
+            <figcaption>Coastal Redwoods thriving in the California fog.</figcaption>
+        </figure>
+
+        <h2>The Age of Giants</h2>
+        <p>The evolutionary history of the redwood family begins roughly 200 million years ago, when Earth's landmasses were fused into the supercontinent Pangea. It was here that primitive cypress trees—the earliest ancestors of redwoods—first evolved and spread across the globe.</p>
+
+        <p>Fast forward 100 million years, and Pangea had fractured into two major continents: Gondwana in the south, which became a sweltering desert, and Laurasia in the north. Laurasia experienced cooler, wetter conditions, causing a persistent fog to blanket much of the continent. Under these humid conditions, a unique lineage of the cypress family emerged: <strong>Sequoioideae</strong>.</p>
+
+        <h3>The Physics of Unlimited Height</h3>
+        <p>To survive, the Sequoioideae lineage made a radical evolutionary trade-off. They sacrificed extensive root development in exchange for the ability to absorb water directly from the thick, airborne fog. Millions of years ago, when the air was heavily saturated, this was a highly rewarding strategy.</p>
+
+        <p>This airborne water delivery is precisely what allowed redwoods to become the tallest living things on Earth. For most trees, height is strictly limited by <em>capillary action</em>—the physical maximum height that water can be pulled up from the roots against gravity. By bypassing the roots and drinking directly from the sky, sequoias were no longer constrained by this physical limit.</p>
+
+        <h2>The Great Climate Shift</h2>
+        <p>If sequoias were so perfectly adapted, why did they disappear from the rest of the world? Starting 35 million years ago, the planet entered its most recent ice age, triggering two catastrophic changes for the redwood family:</p>
+        <ul>
+            <li><strong>The encroaching freeze:</strong> Redwoods cannot tolerate deep, prolonged freezes. As glaciers expanded from the poles, the redwoods' habitable zone shrank.</li>
+            <li><strong>The loss of humidity:</strong> Colder air holds significantly less moisture than warm air. As global temperatures dropped, the planet's atmospheric humidity plummeted.</li>
+        </ul>
+
+        <h2>The California Sanctuary</h2>
+        <p>They survived in California due to a geographic anomaly. First, massive glaciers never reached as far south as the California coast. Second, the Pacific Ocean continuously drives cold water currents down from Alaska. When this cold water meets the warm desert air of the California coast, it forces moisture to precipitate out as a dense, seasonal fog.</p>
+
+        <p>This localized fog belt perfectly replicates the ancient, humid conditions of Laurasia, allowing the Coastal Redwood to survive on the coast, while its cousin, the Giant Sequoia, found a similar microclimate high in the Sierra Nevada mountains.</p>
+
+        <!-- Placeholder Image 2 -->
+        <figure>
+            <img src="assets/dawn-redwood.jpg" alt="Close up of Dawn redwood foliage turned copper red in autumn" onerror="this.src='https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?auto=format&fit=crop&w=800&q=80'">
+            <figcaption>Dawn Redwood foliage turning copper red in autumn.</figcaption>
+        </figure>
+
+        <h2>The Asian Survivor: The Dawn Redwood</h2>
+        <p>In 1939, a Chinese botanist named Kan Duo stumbled upon a peculiar tree growing at the base of a village shrine in China's Sichuan province. Locals called it the "water fir." Eventually, botanists connected the dots: the living tree in China was the exact same species as an ancient fossil unearthed in Japan.</p>
+
+        <p>The <strong>Dawn Redwood</strong> had survived as a tiny relict population in a single Chinese valley. To survive the drier, modern climate, it became deciduous (dropping its needles in winter to conserve water) and semi-aquatic, growing in floodplains with constant access to groundwater.</p>
+
+        <!-- Interactive Widget Section -->
+        <div class="widget-container">
+            <h2>Redwood Species Explorer</h2>
+            <p>Select a species below to explore its unique evolutionary traits and modern habitat.</p>
+            
+            <div class="controls">
+                <select id="speciesSelect" onchange="updateSpecies()">
+                    <option value="coastal">Coastal Redwood</option>
+                    <option value="giant">Giant Sequoia</option>
+                    <option value="dawn">Dawn Redwood</option>
+                </select>
+            </div>
+
+            <div id="coastal" class="species-card active">
+                <h3>Coastal Redwood (Sequoia sempervirens)</h3>
+                <ul class="trait-list">
+                    <li><strong>Location:</strong> California Coast</li>
+                    <li><strong>Claim to Fame:</strong> Tallest trees on Earth (up to 380 ft)</li>
+                    <li><strong>Foliage:</strong> Evergreen</li>
+                    <li><strong>Water Strategy:</strong> Coastal fog absorption</li>
+                </ul>
+            </div>
+
+            <div id="giant" class="species-card">
+                <h3>Giant Sequoia (Sequoiadendron giganteum)</h3>
+                <ul class="trait-list">
+                    <li><strong>Location:</strong> Sierra Nevada Mountains, CA</li>
+                    <li><strong>Claim to Fame:</strong> Most massive trees by volume</li>
+                    <li><strong>Foliage:</strong> Evergreen</li>
+                    <li><strong>Water Strategy:</strong> Snowmelt and mountain groundwater</li>
+                </ul>
+            </div>
+
+            <div id="dawn" class="species-card">
+                <h3>Dawn Redwood (Metasequoia glyptostroboides)</h3>
+                <ul class="trait-list">
+                    <li><strong>Location:</strong> Sichuan, China</li>
+                    <li><strong>Claim to Fame:</strong> Smallest of the three; known as a "Living Fossil"</li>
+                    <li><strong>Foliage:</strong> Deciduous (drops needles in winter)</li>
+                    <li><strong>Water Strategy:</strong> Floodplains and wetland groundwater</li>
+                </ul>
+            </div>
+        </div>
+
+        <blockquote>
+            <strong>Key insight:</strong> All three of these remaining populations were nearly driven to complete extinction by human logging in the 19th and 20th centuries before massive conservation efforts protected them.
+        </blockquote>
+
+    </main>
+
+    <!-- JavaScript for Widget Functionality -->
+    <script>
+        function updateSpecies() {
+            // Get selected value
+            const selectedId = document.getElementById('speciesSelect').value;
+            
+            // Hide all cards
+            const cards = document.querySelectorAll('.species-card');
+            cards.forEach(card => {
+                card.classList.remove('active');
+            });
+            
+            // Show selected card
+            document.getElementById(selectedId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
